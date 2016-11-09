@@ -1,0 +1,83 @@
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+	display: table;
+}
+table, th, td { 
+	border: none; 
+}
+thead { 
+	border-bottom: 1px solid $thead-border-color; 
+	background-color: $thead-bg;
+}
+th {
+	color: $thead-color;
+	padding: $thead-padding;
+	font-weight: $thead-weight;
+}
+tr {
+	border-bottom: 1px solid $tbody-border-color;
+}
+td {
+	padding: $tbody-padding;
+	color: $tbody-color;
+}
+td, th {
+	display: table-cell;
+	text-align: left;
+	vertical-align: middle;
+}
+tbody tr { transition: background-color .25s ease; }
+tbody tr:hover { background: #f2f2f2; }
+
+
+@media only screen and (max-width: 992px) {
+	table.responsive-table {
+		width: 100%;
+		border-collapse: collapse;
+		border-spacing: 0;
+		display: block;
+		position: relative;
+	}
+	table.responsive-table td:empty:before { content: '\00a0'; }
+	table.responsive-table th, table.responsive-table td {
+		margin: 0;
+		vertical-align: top;
+	}
+	table.responsive-table th { text-align: left; }
+	table.responsive-table thead {
+		display: block;
+		float: left;
+	}
+	table.responsive-table thead tr {
+		display: block;
+		padding: 0 10px 0 0;
+	}
+	table.responsive-table thead th::before { content: "\00a0"; }
+	table.responsive-table tbody {
+		display: block;
+		width: auto;
+		position: relative;
+		overflow-x: auto;
+		white-space: nowrap;
+	}
+	table.responsive-table tbody tr {
+		display: inline-block;
+		vertical-align: top;
+	}
+	table.responsive-table th {
+		display: block;
+		text-align: right;
+	}
+	table.responsive-table td {
+		display: block;
+		min-height: 1.25em;
+		text-align: left;
+	}
+	table.responsive-table tr { padding: 0 10px; }
+	table.responsive-table thead {
+		border: 0;
+		border-right: 1px solid #d0d0d0;
+	}
+}
