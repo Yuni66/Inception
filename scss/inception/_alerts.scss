@@ -1,0 +1,21 @@
+[class*="alert-"] {
+    @extend %alert;
+}
+.alert {
+	&-success {
+		background-color: $alert-success-bg;
+		color: $alert-success-color;
+	}
+	&-info {
+		background-color: $alert-info-bg; 
+		color: $alert-info-color;
+	}
+	&-warning {
+		background-color: $alert-warning-bg;
+		color: $alert-warning-color;
+	}
+	&-danger {
+		background-color:$alert-danger-bg ;
+		color: $alert-danger-color;
+	}
+}
