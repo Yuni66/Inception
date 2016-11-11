@@ -1,4 +1,4 @@
-# Inception Micro Framework CSS ultra léger
+# Inception - Micro Framework CSS ultra léger
 
 ## Installation
 
