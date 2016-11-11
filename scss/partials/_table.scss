@@ -1,0 +1,92 @@
+table, th, td {
+	border: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+	display: table;
+	border: $table-border;
+}
+thead {
+	border: $thead-border;
+	border-bottom: $thead-border-bottom;
+	background-color: $thead-bg;
+}
+th {
+	color: $thead-color;
+	padding: $thead-padding;
+	font-weight: $thead-weight;
+}
+tr {
+	border-bottom: 1px solid $tbody-border-color;
+	tbody &:last-child {
+		border-bottom: 0;
+	}
+}
+td {
+	padding: $tbody-padding;
+	color: $tbody-color;
+}
+td, th {
+	display: table-cell;
+	text-align: left;
+	vertical-align: middle;
+}
+tbody tr {
+	transition: background-color .25s ease;
+	&:hover { background: #f2f2f2; }
+}
+
+
+@media only screen and (max-width: 992px) {
+	table.responsive-table {
+		width: 100%;
+		border-collapse: collapse;
+		border-spacing: 0;
+		display: block;
+		position: relative;
+
+		& td:empty:before { content: '\00a0'; }
+		& th, & td {
+			margin: 0;
+			vertical-align: top;
+		}
+		& th {
+			display: block;
+			text-align: right;
+		}
+
+		& thead {
+			display: block;
+			float: left;
+			border: 0;
+			border-right: 1px solid #d0d0d0;
+
+			& tr {
+				display: block;
+				padding: 0 10px 0 0;
+			}
+			& th::before { content: "\00a0"; }
+		}
+
+		& tbody {
+			display: block;
+			width: auto;
+			position: relative;
+			overflow-x: auto;
+			white-space: nowrap;
+			& tr {
+				display: inline-block;
+				vertical-align: top;
+			}
+		}
+
+		& td {
+			display: block;
+			min-height: 1.25em;
+			text-align: left;
+		}
+		& tr { padding: 0 10px; }
+	}
+}

@@ -1,0 +1,16 @@
+code {
+    background-color: $code-bg;
+    padding: 2px 5px;
+}
+pre {
+    background-color: $code-bg;
+    color: $code-color;
+    display: block;
+    line-height: 1.42857;
+    margin: 0 0 10px;
+    padding: $code-padding;
+    word-break: break-all;
+    word-wrap: break-word;
+	overflow: auto;
+	border-left: $code-border;
+}

@@ -50,12 +50,12 @@ $neutron_breakpoints: (
 	desktop-sml: 		createBreakpoint($desktop-sml-min, $desktop-sml-max),
 	desktop-mid: 		createBreakpoint($desktop-mid-min, $desktop-mid-max),
 	desktop-lrg: 		createBreakpoint($desktop-lrg-min),
-	
+
 	to-phablet: 		createBreakpoint(0, $phablet-max),
 	to-tablet: 		createBreakpoint(0, $tablet-max),
 	to-desktop-sml:		createBreakpoint(0, $desktop-sml-max),
 	to-desktop-mid: 	createBreakpoint(0, $desktop-mid-max),
-	
+
 	from-phablet: 		createBreakpoint($phablet-min),
 	from-tablet: 		createBreakpoint($tablet-min),
 	from-desktop: 		createBreakpoint($desktop-sml-min),
@@ -95,7 +95,7 @@ $neutron_breakpoints: (
 
 			$media: $media + $media-type;
 		}
-		
+
 		// Add additional supplied query features to media string
 		@if $media-feature != "" {
 			@if $media != "" {

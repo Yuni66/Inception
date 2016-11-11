@@ -6,22 +6,25 @@ $font-color: 							#000;
 
 // General max width
 $body-max-width: 						1920px;
-$container-max-width: 					1300px; 
+$container-max-width: 					1300px;
 // Applied at '.container'
- 
+
 // General fonts
 $font-family-base: 						Arial, Helvetica, sans-serif;
 $font-size-base: 						14px;
 $font-size-large: 						ceil(($font-size-base * 1.25));
 $font-size-small: 						ceil(($font-size-base * 0.85));
 $line-height-base: 						floor(($font-size-base * 1.428571429));
-  
-// Links
-$link-color: 							#ee6e73; 
-$link-hover-color: 						darken($link-color, 15%);
-$link-hover-decoration: 				none;  
 
-$transition: 							.2s ease-in all;    
+$paragraph-margin: 						0 0 10px 0;
+
+// Links
+$link-color: 							#ee6e73;
+$link-decoration: 						none;
+$link-hover-color: 						darken($link-color, 15%);
+$link-hover-decoration: 				none;
+
+$transition: 							.2s ease-in all;
 
 
 
@@ -69,15 +72,19 @@ $btn-secondary-hover-border: 			$btn-secondary-hover-bg;
 
 //===== TABLES
 
+$table-border:							0;
+$table-border-color:					#f1f1f1;
+
 $thead-bg: 								inherit;
 $thead-color: 							inherit;
-$thead-border-color: 					#d0d0d0;
+$thead-border: 							0;
+$thead-border-bottom: 					1px solid $table-border-color;
 $thead-weight:		 					700;
 $thead-padding: 						15px 5px;
 
 $tbody-bg: 								$thead-bg;
 $tbody-color: 							$thead-color;
-$tbody-border-color: 					$thead-border-color;
+$tbody-border-color: 					$table-border-color;
 $tbody-padding: 						$thead-padding;
 
 
@@ -122,8 +129,15 @@ $code-border:							.2rem solid #9b4dca;
 
 
 
-//===== IMAGE
-$image-rounded:							5px;
+//===== LISTS
+
+$ul-padding-general:					0;
+$ul-padding-left:						20px;
+$li-padding:							8px 0;
+
+$ul-reset-padding-left:					15px;
+
+$li-inline-padding:						0 10px;
 
 
 
@@ -138,15 +152,15 @@ $alert-success-color: 					#00796b;
 
 // Info
 $alert-info-bg: 						#e1f5fe;
-$alert-info-color: 						#01579b; 
+$alert-info-color: 						#01579b;
 
 // Warning
-$alert-warning-bg: 						#fff8e1; 
+$alert-warning-bg: 						#fff8e1;
 $alert-warning-color: 					#795548;
 
 // Danger
 $alert-danger-bg: 						#ffebee;
-$alert-danger-color: 					#c62828; 
+$alert-danger-color: 					#c62828;
 
 
 
@@ -172,13 +186,17 @@ $breadcrumbs-bg:                    	#ee6e73;
 $breadcrumbs-color:                 	rgba(255, 255, 255, 0.7);
 $breadcrumbs-active-color:              #fff;
 $breadcrumbs-padding:               	30px;
-$breadcrumbs-height: 	              	46px; 
+$breadcrumbs-height: 	              	46px;
 
 $breadcrumbs-link-color:            	rgba(255, 255, 255, 0.7);
 $breadcrumbs-link-hover-color:      	#fff;
-$breadcrumbs-link-active-color:     	$breadcrumbs-link-hover-color; 
+$breadcrumbs-link-active-color:     	$breadcrumbs-link-hover-color;
 
 $breadcrumbs-separator:             	"/";
+
+
+//===== IMAGE
+$image-rounded:							5px;
 
 
 

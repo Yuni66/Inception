@@ -3,7 +3,7 @@
 
 //Declares the container element of child rows or columns
 @mixin columns(
-	$columns:"", 
+	$columns:"",
 	$container-width: setting("layout","container-max-width"),
 	$container-align: "",
 	$margin: "",
@@ -18,39 +18,39 @@
 	@include clear-fix();
 
 	@if $columns != "" {
-		
+
 		$columns: neutron_calc-column-ratio($columns);
-		$column-sum: neutron_sum($columns);	
+		$column-sum: neutron_sum($columns);
 		$column-count: length($columns);
-		$column-widths: neutron_calculate-column-widths($columns);	
+		$column-widths: neutron_calculate-column-widths($columns);
 		$target-child-selector: neutron_child-selector($target);
-		
+
 		$margin-left: 0;
 		$margin-right: 0;
-		
+
 		@if $margin != "" {
-			
+
 			//get margins for left and right of the columns
 			$margin-left: neutron_extract-position($margin,left);
 			$margin-right: neutron_extract-position($margin,right);
-		
+
 		}
-	
+
 		//assign calculated widths to elements
 		$index: 0;
-		@each $width in $column-widths {	
+		@each $width in $column-widths {
 			$index: $index + 1;
 
 			& > #{$target}:#{$target-child-selector}(#{$column-count}n+#{$index}) {
-			
+
 				$calc-contents: "#{$width}";
-					
+
 				@if $margin != "" {
-					
+
 					@if $margin-left != 0 {
 						$calc-contents: $calc-contents + " - #{$margin-left}";
-					}					
-					
+					}
+
 					@if $margin-right != 0 {
 						$calc-contents: $calc-contents + " - #{$margin-right}";
 					}
@@ -60,23 +60,23 @@
 						$flush-right: $margin-right / $column-count;
 						$calc-contents: $calc-contents + " + #{$flush-left}";
 						$calc-contents: $calc-contents + " + #{$flush-right}";
-					}	
+					}
 
 				}
 
 				width: calc(#{$calc-contents});
 				float:left;
-				
+
 				@content;
 
 				@if $margin != "" {
 					margin: $margin;
 				}
-				
+
 				//if first column
 				@if $index == 1 {
 					clear: left;
-					
+
 					@if $flush-padding {
 						padding-left: 0;
 					}
@@ -86,7 +86,7 @@
 				} @else {
 					clear: none;
 				}
-				
+
 				//if last column
 				@if $index == $column-count {
 					@if $flush-padding {
@@ -97,14 +97,14 @@
 					}
 				}
 			}
-		}	
+		}
 	}
 
 	//Set alignment of container
 	@if $container-align != "" {
 		@include container-align($container-align);
 	}
-	
+
 	// Change order of columns
 	@if type-of($order) == list and type-of($columns) == list {
 		@include order($order, $columns, $margin, $flush-margin, $target);
@@ -144,9 +144,9 @@
 }
 
 @mixin order($order: "", $columns:"", $margin:"", $flush-margin:setting("layout","flush-margin"), $target:"*") {
-	
+
 	@if type-of($order) == list {
-		
+
 		//if no ratio is set, use $order to determine number of equal width columns
 		@if $columns == "" {
 			$columns: length($order);
@@ -157,15 +157,15 @@
 		$column-sum: neutron_sum($columns);
 		$column-count: length($columns);
 		$target-child-selector: neutron_child-selector($target);
-				
+
 		$margin-left: 0;
 		$margin-right: 0;
-		
-		@if $margin != "" {	
+
+		@if $margin != "" {
 			$margin-left: neutron_extract-position($margin,left);
 			$margin-right: neutron_extract-position($margin,right);
 		}
-		
+
 		//calculate width of each column
 		$column-width-string:();
 
@@ -173,10 +173,10 @@
 		$columns-offset: ();
 		@each $column in $columns {
 			$i: $i + 1;
-			
-			// calculate column widths 
+
+			// calculate column widths
 			$col-width: (100% / $column-sum) * $column;
-			
+
 			@if $margin != "" {
 				@if $flush-margin {
 					$flush-left: $margin-left / $column-count;
@@ -187,23 +187,23 @@
 			}
 
 			$column-width-string: append($column-width-string, "(#{$col-width})", comma);
-					
+
 			// get sum of left offset of columns that come before current original position
 			$current-index: 0;
 			$current-offset: "0px";
-			
+
 			@while $current-index < $i {
 				$current-index: $current-index + 1;
-				
+
 				$add-offset: nth($column-width-string, $current-index);
 				$current-offset: $current-offset + " + " + $add-offset;
 			}
-			
+
 			$current-offset: "(" + $current-offset + ")";
 			$columns-offset: append($columns-offset, $current-offset, comma)
-			
+
 		}
-		
+
 		$new-column-width-string: neutron_reorder-list($column-width-string, $order);
 		$offset-totals: ();
 
@@ -213,13 +213,13 @@
 			$i: $i + 1;
 
 			// get sum of widths of columns that come before current one and add to offset
-			$new-position: index($order, $column);	
+			$new-position: index($order, $column);
 			$new-offset: "0px";
-			
+
 			$index: 0;
 			@while $index < $new-position {
 				$index: $index + 1;
-				
+
 				$new-offset: $new-offset + " + " + nth($new-column-width-string, $index);
 			}
 
@@ -235,18 +235,18 @@
 }
 
 @mixin container-align($align:"") {
-	//Set alignment 
+	//Set alignment
 	@if $align != "" {
 		float:none;
-		
+
 		@if $align == left {
 			margin-left: 0;
 		}
-		
+
 		@if $align == right {
 			margin-right: 0;
 		}
-		
+
 		@if $align == center {
 			margin-right: auto;
 			margin-left: auto;
@@ -260,19 +260,19 @@
 
 // UTILITY FUNCTIONS
 @function neutron_reorder-list($list, $order) {
-	
+
 	$new-list:();
 
 	@each $index in $order {
 		$item: nth($list, $index);
 		$new-list: append($new-list, $item, comma);
 	}
-	
+
 	@return $new-list;
 }
 
 @function neutron_calculate-column-widths($column-ratio) {
-	
+
 	$column-sum: neutron_sum($column-ratio);
 	$column-count: length($column-ratio);
 	$column-widths: ();
@@ -282,30 +282,30 @@
 		$width: (100% / $column-sum) * $column;
 		$column-widths: append($column-widths, $width, comma);
 	}
-	
+
 	@return $column-widths;
 }
 
 @function neutron_calc-column-ratio($columns) {
 	$column-ratio: $columns;
-	
+
 	@if type-of($columns) != list {
 		$column-ratio: ();
-		
+
 		@for $i from 1 through $columns {
 			$column-ratio: append($column-ratio, 1, comma);
 		}
 	}
-	
+
 	@return $column-ratio;
 }
 
 @function neutron_child-selector($target-selector) {
 	$child-selector: "nth-of-type";
-	
+
 	@if $target-selector == "*" {
 		$child-selector: "nth-child";
 	}
-	
+
 	@return $child-selector;
 }

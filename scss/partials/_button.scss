@@ -1,0 +1,54 @@
+[class*="btn-"] {
+	@extend %btn;
+
+	&:hover {
+		@extend %box_shadow;
+	}
+}
+
+.btn {
+	&-m {
+		height: 36px;
+		line-height: 36px;
+	}
+	&-xl {
+		height: 54px;
+		line-height: 54px;
+	}
+
+	&-default {
+		border: 1px solid $btn-default-border;
+		background-color: $btn-default-bg;
+		color: $btn-default-color;
+
+		&:hover, &:focus {
+			background-color: $btn-default-hover-bg;
+			color: $btn-default-hover-color;
+			border-color: $btn-default-hover-border;
+		}
+	}
+
+	&-primary {
+		border: 1px solid $btn-primary-border;
+		background-color: $btn-primary-bg;
+		color: $btn-primary-color;
+
+		&:hover, &:focus {
+			background-color: $btn-primary-hover-bg;
+			color: $btn-primary-hover-color;
+			border-color: $btn-primary-hover-border;
+		}
+	}
+
+	&-secondary {
+		border: 1px solid $btn-secondary-border;
+		background-color: $btn-secondary-bg;
+		color: $btn-secondary-color;
+
+		&:hover, &:focus {
+			background-color: $btn-secondary-hover-bg;
+			color: $btn-secondary-hover-color;
+			border-color: $btn-secondary-hover-border;
+		}
+	}
+}

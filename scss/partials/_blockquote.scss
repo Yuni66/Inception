@@ -1,0 +1,19 @@
+blockquote {
+	padding-left: $blockquote-padding;
+	border-left: $blockquote-border;
+	font-size: 1.1rem;
+	font-style: $blockquote-font-style;
+	background-color: $blockquote-bg;
+	color: $blockquote-color;
+
+	& footer {
+		color: $blockquote-footer-color;
+		display: block;
+		font-size: 0.8em;
+		line-height: 1.42857;
+
+		&::before {
+			content: "— ";
+		}
+	}
+}

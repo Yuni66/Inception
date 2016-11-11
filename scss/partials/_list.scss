@@ -1,0 +1,25 @@
+// Listes sans puces
+ul {
+	list-style-type: none;
+	padding: $ul-padding-general;
+
+	& li {
+		padding: $li-padding;
+
+		& ul {
+			padding-left: $ul-padding-left;
+		}
+	}
+}
+
+// Listes avec puces
+ul.reset, ul.reset ul {
+	list-style-type: circle;
+	padding-left: $ul-reset-padding-left;
+}
+
+// Listes inline
+.list-inline li {
+	display: inline-block;
+	padding: $li-inline-padding;
+}

@@ -30,15 +30,15 @@ $_neutron: (
 
 // Modules
 // ============================================
-@import "neutron/floatbox"; 
+@import "neutron/floatbox";
 @import "neutron/queries";
 @import "neutron/utilities";
 
 // Default Styles
 // ============================================
-// Set root element to use border-box 
+// Set root element to use border-box
 // sizing and set all elements on the page
-// to inherit border-box sizing. 
+// to inherit border-box sizing.
 
 html {
 	-moz-box-sizing: border-box;
@@ -66,28 +66,28 @@ body {
 
 //Adds all items in a list and returns the result
 @function neutron_sum($list) {
-	
+
 	$total: 0;
 	@each $element in $list {
 		$total: $total + $element;
 	}
 	@return $total;
-	
+
 }
 
 @function neutron_extract-position($shorthand, $position) {
 	$shorthand-length: length($shorthand);
-	
+
 	//if only one variable passed, return it
 	@if $shorthand-length == 1 {
 		@return $shorthand;
 	}
-	
+
 	@if $shorthand-length == 2 {
 		@if $position == top or $position == bottom {
 			@return nth($shorthand, 1);
 		}
-		
+
 		@if $position == left or $position == right {
 			@return nth($shorthand, 2);
 		}

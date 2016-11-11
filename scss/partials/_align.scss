@@ -1,0 +1,17 @@
+.text-left {
+	@extend %text_left;
+}
+.text-center {
+	@extend %text_center;
+}
+.text-right {
+	@extend %text_right;
+}
+
+// FLOATS
+.float-left {
+	@extend %float_left;
+}
+.float-right {
+	@extend %float_right;
+}

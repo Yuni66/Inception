@@ -1,7 +1,7 @@
 // Utilities
 //---------------------------------------------
 
-//hides the element when the 
+//hides the element when the
 //provided media query is supplied.
 @mixin hide($breakpoint: null) {
 	@if $breakpoint {
@@ -15,7 +15,7 @@
 	}
 }
 
-//shows the element when the 
+//shows the element when the
 //provided media query is supplied.
 @mixin show($breakpoint: null) {
 	@if $breakpoint {
