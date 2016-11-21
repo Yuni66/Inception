@@ -9,5 +9,8 @@ Télécharger la feuille de style compilée en [CSS](https://raw.githubuserconte
 
 ## Structure
 
-Votre projet est constitué de deux dossiers **scss** (dossier de travail) et **dist** (dossier de production).
+Votre projet est constitué de deux dossiers : 
+- **scss** (dossier de travail) 
+- **dist** (dossier de production)
 
+**Documentation en cours de création** (85%).
