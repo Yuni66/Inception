@@ -1,216 +1,216 @@
 //===== GLOBAL
 
 // General colors
-$body-bg: 								               #fff;
-$font-color: 							               #000;
+$body-bg: 								#fff;
+$font-color: 							#000;
 
 // General max width
-$body-max-width: 						             1920px;
-$container-max-width: 					         1300px;
+$body-max-width: 						1920px;
+$container-max-width: 					1300px;
 // Applied at '.container'
 
 // General fonts
-$font-family-base: 						           Arial, Helvetica, sans-serif;
-$font-size-base: 						             14px;
-$font-size-large: 						           ceil(($font-size-base * 1.25));
-$font-size-small: 						           ceil(($font-size-base * 0.85));
-$line-height-base: 						           floor(($font-size-base * 1.428571429));
+$font-family-base: 						Arial, Helvetica, sans-serif;
+$font-size-base: 						14px;
+$font-size-large: 						ceil(($font-size-base * 1.25));
+$font-size-small: 						ceil(($font-size-base * 0.85));
+$line-height-base: 						floor(($font-size-base * 1.428571429));
 
-$paragraph-margin: 						           0 0 10px 0;
+$paragraph-margin: 						0 0 10px 0;
 
 // Links
-$link-color: 							               #ee6e73;
-$link-decoration: 						           none;
-$link-hover-color: 						           darken($link-color, 15%);
-$link-hover-decoration: 				         none;
+$link-color: 							#ee6e73;
+$link-decoration: 						none;
+$link-hover-color: 						darken($link-color, 15%);
+$link-hover-decoration: 				none;
 
-$transition: 							               .2s ease-in all;
+$transition: 							.2s ease-in all;
 
 
 
 //===== HEADING
 
-$heading-font-family: 					         $font-family-base;
-$heading-font-weight: 					         500;
-$heading-font-color: 					           $font-color;
+$heading-font-family: 					$font-family-base;
+$heading-font-weight: 					500;
+$heading-font-color: 					$font-color;
 
 
 
 //===== BUTTONS
 
-$btn-font-weight: 						           400;
-$btn-border-radius: 					           5px;
+$btn-font-weight: 						400;
+$btn-border-radius: 					5px;
 
 // Default
-$btn-default-bg: 						             #e6e6e6;
-$btn-default-color: 					           #555;
-$btn-default-border: 					           $btn-default-bg;
+$btn-default-bg: 						#e6e6e6;
+$btn-default-color: 					#555;
+$btn-default-border: 					$btn-default-bg;
 
-$btn-default-hover-bg: 					         darken($btn-default-bg, 20%);
-$btn-default-hover-color: 				       #000;
-$btn-default-hover-border: 				       $btn-default-hover-bg;
+$btn-default-hover-bg: 					darken($btn-default-bg, 20%);
+$btn-default-hover-color: 				#000;
+$btn-default-hover-border: 				$btn-default-hover-bg;
 
 // Primary
-$btn-primary-bg: 						             #ee6e73;
-$btn-primary-color: 					           #fff;
-$btn-primary-border: 					           $btn-primary-bg;
+$btn-primary-bg: 						#ee6e73;
+$btn-primary-color: 					#fff;
+$btn-primary-border: 					$btn-primary-bg;
 
-$btn-primary-hover-bg: 					         darken($btn-primary-bg, 15%);
-$btn-primary-hover-color: 				       #fff;
-$btn-primary-hover-border: 				       $btn-primary-hover-bg;
+$btn-primary-hover-bg: 					darken($btn-primary-bg, 15%);
+$btn-primary-hover-color: 				#fff;
+$btn-primary-hover-border: 				$btn-primary-hover-bg;
 
 // Secondary
-$btn-secondary-bg: 						           #9b4dca;
-$btn-secondary-color: 					         #fff;
-$btn-secondary-border: 					         $btn-secondary-bg;
+$btn-secondary-bg: 						#9b4dca;
+$btn-secondary-color: 					#fff;
+$btn-secondary-border: 					$btn-secondary-bg;
 
-$btn-secondary-hover-bg: 				         lighten($btn-secondary-bg, 15%);
-$btn-secondary-hover-color: 			       #fff;
-$btn-secondary-hover-border: 			       $btn-secondary-hover-bg;
+$btn-secondary-hover-bg: 				lighten($btn-secondary-bg, 15%);
+$btn-secondary-hover-color: 			#fff;
+$btn-secondary-hover-border: 			$btn-secondary-hover-bg;
 
 
 
 //===== TABLES
 
-$table-border:							             0;
-$table-border-color:					           #f1f1f1;
+$table-border:							0;
+$table-border-color:					#f1f1f1;
 
-$thead-bg: 								               inherit;
-$thead-color: 							             inherit;
-$thead-border: 							             0;
-$thead-border-bottom: 					         1px solid $table-border-color;
-$thead-weight:		 					             700;
-$thead-padding: 						             15px 5px;
+$thead-bg: 								inherit;
+$thead-color: 							inherit;
+$thead-border: 							0;
+$thead-border-bottom: 					1px solid $table-border-color;
+$thead-weight:		 					700;
+$thead-padding: 						15px 5px;
 
-$tbody-bg: 								               $thead-bg;
-$tbody-color: 							             $thead-color;
-$tbody-border-color: 					           $table-border-color;
-$tbody-padding: 						             $thead-padding;
+$tbody-bg: 								$thead-bg;
+$tbody-color: 							$thead-color;
+$tbody-border-color: 					$table-border-color;
+$tbody-padding: 						$thead-padding;
 
 
 
 //===== FORMS
 
-$input-bg: 								               #fff;
-$input-color: 							             inherit;
-$input-border: 							             1px solid #bfbfbf;
-$input-border-focus: 					           red;
-$input-border-radius: 					         2px;
+$input-bg: 								#fff;
+$input-color: 							inherit;
+$input-border: 							1px solid #bfbfbf;
+$input-border-focus: 					red;
+$input-border-radius: 					2px;
 
-$input-color-placeholder: 				       red;
+$input-color-placeholder: 				red;
 
-$input-height: 							             2.7rem;
+$input-height: 							2.7rem;
 
-$textarea-height: 						           3rem;
-$textarea-padding: 						           1rem 0 1rem 1%;
+$textarea-height: 						3rem;
+$textarea-padding: 						1rem 0 1rem 1%;
 
 // Input submit = btn primary
 
 
 //===== BLOCKQUOTE
 
-$blockquote-bg: 						             inherit;
-$blockquote-color: 						           inherit;
-$blockquote-font-style: 				         italic;
+$blockquote-bg: 						inherit;
+$blockquote-color: 						inherit;
+$blockquote-font-style: 				italic;
 
-$blockquote-padding: 					           20px;
-$blockquote-border: 					           5px solid #ee6e73;
+$blockquote-padding: 					20px;
+$blockquote-border: 					5px solid #ee6e73;
 
-$blockquote-footer-color: 				       #a9a9a9;
+$blockquote-footer-color: 				#a9a9a9;
 
 
 
 //===== CODE
 
-$code-bg: 							                 #f5f5f5;
-$code-color: 							               #333;
-$code-padding: 							             20px;
-$code-border:							               .2rem solid #9b4dca;
+$code-bg: 								#f5f5f5;
+$code-color: 							#333;
+$code-padding: 							20px;
+$code-border:							.2rem solid #9b4dca;
 
 
 
 //===== LISTS
 
-$ul-padding-general:					           0;
-$ul-padding-left:						             20px;
-$li-padding:							               8px 0;
+$ul-padding-general:					0;
+$ul-padding-left:						20px;
+$li-padding:							8px 0;
 
-$ul-reset-padding-left:					         15px;
+$ul-reset-padding-left:					15px;
 
-$li-inline-padding:						           0 10px;
+$li-inline-padding:						0 10px;
 
 
 
 //===== ALERTS
 
-$alert-padding: 						             15px;
-$alert-border-radius: 					         4px; 
+$alert-padding: 						15px;
+$alert-border-radius: 					4px; 
 
 // Success
-$alert-success-bg: 						           #e0f2f1;
-$alert-success-color: 					         #00796b;
+$alert-success-bg: 						#e0f2f1;
+$alert-success-color: 					#00796b;
 
 // Info
-$alert-info-bg: 						             #e1f5fe;
-$alert-info-color: 						           #01579b;
+$alert-info-bg: 						#e1f5fe;
+$alert-info-color: 						#01579b;
 
 // Warning
-$alert-warning-bg: 						           #fff8e1;
-$alert-warning-color: 					         #795548;
+$alert-warning-bg: 						#fff8e1;
+$alert-warning-color: 					#795548;
 
 // Danger
-$alert-danger-bg: 						           #ffebee;
-$alert-danger-color: 					           #c62828;
+$alert-danger-bg: 						#ffebee;
+$alert-danger-color: 					#c62828;
 
 
 
 //===== DROPDOWN
 
-$dropdown-bg: 							             $body-bg;
-$dropdown-padding-height: 				       15px;
-$dropdown-padding-width: 				         15px;
-$dropdown-link-color: 					         $link-color;
-$dropdown-link-hover-bg: 				         darken($body-bg, 5%);
-$dropdown-link-hover-color: 			       $link-hover-color;
+$dropdown-bg: 							$body-bg;
+$dropdown-padding-height: 				15px;
+$dropdown-padding-width: 				15px;
+$dropdown-link-color: 					$link-color;
+$dropdown-link-hover-bg: 				darken($body-bg, 5%);
+$dropdown-link-hover-color: 			$link-hover-color;
 
-$dropdown-sublevel-position: 			       $dropdown-padding-height * 2;
-$dropdown-sublevel-width: 				       200px;
-$dropdown-sublevel-bg: 					         $dropdown-bg;
-$dropdown-sublevel-padding: 			       10px;
-$dropdown-sublevel-link-color: 			     $link-color;
-$dropdown-sublevel-link-border-radius: 	 5px;
-$dropdown-sublevel-link-hover-bg: 		   darken($body-bg, 5%);
-$dropdown-sublevel-link-hover-color:	   $link-hover-color;
+$dropdown-sublevel-position: 			$dropdown-padding-height * 2;
+$dropdown-sublevel-width: 				200px;
+$dropdown-sublevel-bg: 					$dropdown-bg;
+$dropdown-sublevel-padding: 			10px;
+$dropdown-sublevel-link-color: 			$link-color;
+$dropdown-sublevel-link-border-radius: 	5px;
+$dropdown-sublevel-link-hover-bg: 		darken($body-bg, 5%);
+$dropdown-sublevel-link-hover-color:	$link-hover-color;
 
 
 
 //===== BREADCRUMBS
 
-$breadcrumbs-bg:                    	   #ee6e73;
-$breadcrumbs-color:                 	   rgba(255, 255, 255, 0.7);
-$breadcrumbs-active-color:               #fff;
-$breadcrumbs-padding:               	   30px;
-$breadcrumbs-height: 	              	   46px;
+$breadcrumbs-bg:                    	#ee6e73;
+$breadcrumbs-color:                 	rgba(255, 255, 255, 0.7);
+$breadcrumbs-active-color:              #fff;
+$breadcrumbs-padding:               	30px;
+$breadcrumbs-height: 	              	46px;
 
-$breadcrumbs-link-color:            	   rgba(255, 255, 255, 0.7);
-$breadcrumbs-link-hover-color:      	   #fff;
-$breadcrumbs-link-active-color:     	   $breadcrumbs-link-hover-color;
+$breadcrumbs-link-color:            	rgba(255, 255, 255, 0.7);
+$breadcrumbs-link-hover-color:      	#fff;
+$breadcrumbs-link-active-color:     	$breadcrumbs-link-hover-color;
 
-$breadcrumbs-separator:             	   "/";
+$breadcrumbs-separator:             	"/";
 
 
 //===== IMAGE
-$image-rounded:							             5px;
+$image-rounded:							5px;
 
 
 
 //===== PAGINATION
-$pagination-padding:					           0 10px;
-$pagination-border-radius:				       2px;
+$pagination-padding:					0 10px;
+$pagination-border-radius:				2px;
 
-$pagination-background-color-active:	   #4fc3f7;
-$pagination-color-active:				         #fff;
-$pagination-color-disabled:				       #999;
+$pagination-background-color-active:	#4fc3f7;
+$pagination-color-active:				#fff;
+$pagination-color-disabled:				#999;
 
-$pagination-link-color:					         #444;
-$pagination-link-hover-color:			       red;
+$pagination-link-color:					#444;
+$pagination-link-hover-color:			red;
