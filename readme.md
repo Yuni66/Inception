@@ -1,5 +1,9 @@
 # Inception - Micro Framework CSS ultra léger
 
+## Documentation
+
+Vous trouverez la documentation détaillée à [cette adresse](https://inception.illusiv.fr).
+
 ## Installation
 
 Plusieurs options sont disponibles :
@@ -12,9 +16,3 @@ Télécharger la feuille de style compilée en [CSS](https://raw.githubuserconte
 Votre projet est constitué de deux dossiers : 
 - **scss** (dossier de travail) 
 - **dist** (dossier de production)
-
-**Documentation en cours de création** (85%).
-
-## Documentation
-
-Vous trouverez la documentation détaillée à [cette adresse](https://inception.illusiv.fr).
