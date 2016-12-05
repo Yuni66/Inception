@@ -14,3 +14,7 @@ Votre projet est constitué de deux dossiers :
 - **dist** (dossier de production)
 
 **Documentation en cours de création** (85%).
+
+## Documentation
+
+Vous trouverez la documentation détaillée à [cette adresse](https://inception.illusiv.fr).
